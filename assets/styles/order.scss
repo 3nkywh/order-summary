@@ -1,0 +1,145 @@
+@use 'base';
+
+.order {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 700px;
+}
+
+.order__header { 
+  width: 100%;
+  height: 220px;
+  border-radius: 15px 15px 0 0;
+}
+
+.order__summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 480px;
+  border-radius: 0 0 15px 15px;
+  padding: 45px;
+  background-color: base.$color-white;
+}
+
+.order__title {
+  font-family: base.$font-black;
+  font-size: 1.8rem;
+  color: base.$color-darkblue;
+}
+
+.order__text {
+  margin: -15px 0;
+  padding: 0 15px;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: center;
+  color: base.$color-desaturedblue;
+}
+
+.order__plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 0 25px;
+  border-radius: 10px;
+  background-color: base.$color-verypaleblue;
+}
+
+.plan__description {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.plan__price {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: base.$color-desaturedblue;
+
+  & b {
+    font-family: base.$font-black;
+    color: base.$color-darkblue;
+  }
+}
+
+.plan__change {
+  font-family: base.$font-bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: base.$color-brightblue;
+
+  &:hover {
+    text-decoration: none;
+    transition: color 0.2s linear;
+    color: base.$color-alphabrightblue;
+  }
+}
+
+.order__payment {
+  width: 100%;
+  height: 50px;
+  font-family: base.$font-black;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px -10px base.$color-alphabrightblue;
+  background-color: base.$color-brightblue;
+  color: base.$color-white;
+  cursor: pointer;
+
+  &:hover {
+    transition: background-color 0.2s linear;
+    background-color: base.$color-alphabrightblue;
+  }
+}
+
+.order__cancel {
+  font-family: base.$font-black;
+  font-size: 0.9rem;
+  background-color: white;
+  color: base.$color-desaturedblue;
+  cursor: pointer;
+
+  &:hover {
+    transition: color 0.2s linear;
+    color: base.$color-darkblue;
+  }
+}
+
+@media (max-width: 480px){
+  html, body { background-image: url(../images/pattern-background-mobile.svg); }
+
+  .order {
+    width: 330px;
+    height: 560px;
+  }
+
+  .order__header { height: 200px; }
+
+  .order__summary { padding: 30px 25px; }
+
+  .order__title { font-size: 1.4rem; }
+
+  .order__text { 
+    margin: -5px 0;
+    font-size: 0.9rem; 
+  }
+
+  .order__plan { 
+    padding: 0 15px; 
+    height: 85px; 
+  }
+
+  .plan__price { font-size: 0.9rem; }
+
+  .plan__change { font-size: 0.8rem; }
+
+  .order__payment {
+    box-shadow: 0 10px 20px -10px base.$color-alphabrightblue;
+  }
+}
+

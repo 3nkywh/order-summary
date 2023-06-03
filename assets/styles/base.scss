@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "redhat-medium";
+  src: url(../fonts/RedHatDisplay-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "redhat-bold";
+  src: url(../fonts/RedHatDisplay-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "redhat-black";
+  src: url(../fonts/RedHatDisplay-Black.ttf);
+  font-weight: 900;
+}
+
+$font-medium: "redhat-medium";
+$font-bold: "redhat-bold";
+$font-black: "redhat-black";
+$color-paleblue: hsl(225, 100%, 94%);
+$color-brightblue: hsl(245, 75%, 52%);
+$color-alphabrightblue: hsla(245, 75%, 52%, 0.7);
+$color-verypaleblue: hsl(225, 100%, 98%);
+$color-desaturedblue: hsl(224, 23%, 55%);
+$color-darkblue: hsl(223, 47%, 23%);
+$color-white: hsl(360, 100%, 100%);
+
+* { 
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-sizing: border-box;
+  font-family: $font-medium;
+}
+
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max(340px, 100vw);
+  height: max(720px, 100vh);
+  background: url(../images/pattern-background-desktop.svg);
+  background-position: top;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-color: $color-paleblue;
+}
